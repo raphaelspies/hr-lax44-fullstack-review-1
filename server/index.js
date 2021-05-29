@@ -8,7 +8,7 @@ const port = 3000;
 
 server.use(morgan('dev'));
 server.use(express.json());
-server.use(express.urlencoded());
+server.use(express.urlencoded({ extended: true }));
 
 server.use(express.static(path.join(__dirname, '../client/dist')));
 
